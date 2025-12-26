@@ -42,7 +42,7 @@ class MultiProviderLoader:
         # Use default paths relative to project root
         project_root = Path(__file__).parent.parent
         self.persist_directory = str(project_root / "chroma_data")
-        self.collection_name = "health_policies"
+        self.collection_name = "insurance_policies"
 
         # Text splitter
         self.text_splitter = RecursiveCharacterTextSplitter(
