@@ -9,6 +9,7 @@ python-multipart==0.0.6
 
 # Vector Database (use newer version with pre-built wheels for Apple Silicon)
 chromadb==0.4.24
+numpy<2.0.0  # ChromaDB not yet compatible with NumPy 2.0
 
 # Web Scraping & Data Processing
 beautifulsoup4==4.12.3
