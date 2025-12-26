@@ -1,0 +1,35 @@
+# Web Framework
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+python-multipart==0.0.6
+
+# LLM & AI
+# Note: llmops_lite will be imported from parent directory
+# Make sure ../llmops_lite exists
+
+# Vector Database (use newer version with pre-built wheels for Apple Silicon)
+chromadb==0.4.24
+
+# Web Scraping & Data Processing
+beautifulsoup4==4.12.3
+requests==2.31.0
+lxml==5.1.0
+html5lib==1.1
+
+# Text Processing (using langchain-text-splitters only, not full langchain)
+langchain-text-splitters==0.0.1
+
+# Data Validation
+pydantic==2.5.3
+pydantic-settings==2.1.0
+
+# Environment Management
+python-dotenv==1.0.1
+
+# Utilities
+python-dateutil==2.8.2
+
+# Testing
+pytest==7.4.4
+pytest-asyncio==0.23.3
+httpx==0.26.0

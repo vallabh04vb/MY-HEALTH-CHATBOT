@@ -1,0 +1,26 @@
+services:
+  # Backend Web Service
+  - type: web
+    name: uhc-chatbot-backend
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: cd backend && pip install -r requirements.txt
+    startCommand: cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: APP_ENV
+        value: production
+      - key: DEBUG
+        value: False
+      - key: CHROMA_PERSIST_DIRECTORY
+        value: /opt/render/project/src/backend/chroma_data
+      - key: CORS_ORIGINS
+        sync: false  # Set manually in Render dashboard
+      - key: LITELLM_PROXY_BASE_URL
+        sync: false  # Set manually (secret)
+      - key: LITELLM_PROXY_SECRET_KEY
+        sync: false  # Set manually (secret)
+    healthCheckPath: /api/health
+    autoDeploy: true

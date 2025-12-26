@@ -1,0 +1,69 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: uhc-chatbot-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount backend code for hot reload
+      - ./backend:/app
+      # Mount llmops_lite from parent directory
+      - ../llmops_lite:/llmops_lite
+      # Persist ChromaDB data
+      - chroma_data:/app/chroma_data
+      # Don't mount venv (conflicts with container packages)
+      - /app/venv
+    environment:
+      - LITELLM_PROXY_BASE_URL=${LITELLM_PROXY_BASE_URL}
+      - LITELLM_PROXY_SECRET_KEY=${LITELLM_PROXY_SECRET_KEY}
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_REGION=${AWS_REGION:-us-east-1}
+      - APP_ENV=development
+      - DEBUG=True
+      - CHROMA_PERSIST_DIRECTORY=/app/chroma_data
+      - CORS_ORIGINS=http://localhost:3000,http://frontend:3000
+    env_file:
+      - ./backend/.env
+    networks:
+      - chatbot-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: http://localhost:8000
+    container_name: uhc-chatbot-frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      # Mount frontend code for hot reload in development
+      - ./frontend:/app
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - NEXT_PUBLIC_API_URL=http://backend:8000
+      - NODE_ENV=development
+    networks:
+      - chatbot-network
+    depends_on:
+      - backend
+
+networks:
+  chatbot-network:
+    driver: bridge
+
+volumes:
+  chroma_data:
+    driver: local
