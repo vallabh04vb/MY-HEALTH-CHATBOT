@@ -4,6 +4,7 @@ uvicorn[standard]==0.27.0
 python-multipart==0.0.6
 
 # LLM & AI
+openai==1.12.0
 # Note: llmops_lite will be imported from parent directory
 # Make sure ../llmops_lite exists
 
