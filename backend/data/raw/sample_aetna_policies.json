@@ -1,0 +1,38 @@
+[
+  {
+    "policy_id": "AETNA-001",
+    "title": "Aetna Bariatric Surgery Medical Necessity Criteria",
+    "url": "https://www.aetna.com/cpb/medical/data/bariatric-surgery.html",
+    "content": "Aetna considers bariatric surgery medically necessary when ALL of the following criteria are met:\n\n1. BMI Criteria (at least one):\n   - BMI ≥ 40 without comorbidities, OR\n   - BMI ≥ 35 with at least ONE of the following:\n     * Type 2 diabetes\n     * Hypertension\n     * Obstructive sleep apnea\n     * Dyslipidemia\n     * Cardiovascular disease\n\n2. Age Requirements:\n   - Age 18-65 years\n   - Consideration for ages 13-17 with severe obesity and life-threatening comorbidities\n\n3. Conservative Treatment History:\n   - Documented participation in physician-supervised weight loss program for at least 6 consecutive months within the past 2 years\n   - Program must include nutritional counseling and increased physical activity\n\n4. Psychological Evaluation:\n   - Comprehensive psychological assessment by licensed mental health professional\n   - Assessment of eating behaviors, motivation, and support system\n   - No untreated psychiatric conditions that would interfere with adherence\n\n5. Multidisciplinary Team:\n   - Evaluation by surgeon, nutritionist, and behavioral health specialist\n   - Member must demonstrate understanding of procedure, lifestyle changes, and commitment\n\n6. Medical Optimization:\n   - Medical conditions optimized prior to surgery\n   - Smoking cessation for at least 6 weeks prior to surgery\n   - No substance abuse in past 12 months\n\n7. Centers of Excellence:\n   - Surgery performed at Aetna-designated Center of Excellence\n   - Surgeon must be board-certified with documented bariatric experience\n\nCovered Procedures:\n- Laparoscopic Roux-en-Y gastric bypass\n- Laparoscopic sleeve gastrectomy\n- Laparoscopic adjustable gastric banding (select cases)\n\nNot Covered:\n- Revision bariatric surgery (except complications)\n- Duodenal switch as primary procedure\n- Endoscopic procedures for weight loss",
+    "sections": {
+      "coverage criteria": "BMI ≥40 or BMI ≥35 with comorbidities (diabetes, hypertension, sleep apnea). Age 18-65. 6-month supervised weight loss. Psychological evaluation. Center of Excellence required.",
+      "prior authorization": "Required. Must submit 6-month weight loss documentation, psychological evaluation, multidisciplinary team notes.",
+      "limitations": "Surgery at Aetna Centers of Excellence only. Board-certified surgeon required. Revision surgery not covered except complications."
+    },
+    "scraped_at": "2024-01-15T11:00:00"
+  },
+  {
+    "policy_id": "AETNA-002",
+    "title": "Aetna Advanced Imaging Prior Authorization Policy",
+    "url": "https://www.aetna.com/cpb/medical/data/advanced-imaging.html",
+    "content": "Aetna requires prior authorization for high-tech diagnostic imaging to ensure appropriate utilization:\n\n1. MRI Authorization Requirements:\n   - Brain MRI: Required (except emergency/stroke protocol)\n   - Spine MRI: Required for all regions\n   - Musculoskeletal MRI: Required (shoulder, knee, hip, ankle, wrist)\n   - Cardiac MRI: Required\n   - Abdomen/Pelvis MRI: Required\n\n2. CT Scan Authorization:\n   - CT Angiography: Required\n   - Cardiac CT: Required\n   - Virtual colonoscopy: Required\n   - Body CT screening: Not covered\n\n3. PET Scan Authorization:\n   - All PET scans require prior authorization\n   - Oncology PET: Covered for staging/restaging specific cancers\n   - Cardiac PET: Covered for viability assessment\n   - Brain PET: Limited to dementia evaluation\n\n4. Clinical Appropriateness Criteria:\n   - Conservative therapy attempted (when clinically appropriate)\n   - Imaging expected to impact treatment decisions\n   - Alternative less costly imaging not suitable\n   - Clinical indication supports imaging choice\n\n5. Authorization Process:\n   - Online submission through Aetna provider portal\n   - Response within 24-48 hours for routine cases\n   - Urgent cases reviewed within 24 hours\n   - Emergency cases reviewed retrospectively\n\n6. Exceptions (No Authorization Needed):\n   - Emergency department imaging\n   - Inpatient imaging\n   - Observation status imaging\n   - Trauma cases",
+    "sections": {
+      "coverage determination": "Prior authorization required for MRI, CT angiography, cardiac CT, all PET scans. Emergency, inpatient, and observation cases exempt.",
+      "authorization process": "Submit via provider portal. 24-48 hours routine, 24 hours urgent, retrospective for emergency.",
+      "clinical criteria": "Conservative therapy attempted, imaging impacts treatment, less costly alternative not suitable."
+    },
+    "scraped_at": "2024-01-15T11:05:00"
+  },
+  {
+    "policy_id": "AETNA-003",
+    "title": "Aetna Genetic Testing Coverage Policy",
+    "url": "https://www.aetna.com/cpb/medical/data/genetic-testing.html",
+    "content": "Aetna covers genetic testing when medical necessity criteria are established:\n\n1. BRCA Testing - Covered for:\n   - Personal history breast cancer age ≤45\n   - Breast cancer age ≤50 with Ashkenazi Jewish ancestry\n   - Triple-negative breast cancer age ≤60\n   - Ovarian/fallopian tube/primary peritoneal cancer\n   - Male breast cancer\n   - Pancreatic cancer with family history of BRCA\n   - Metastatic prostate cancer\n   - First-degree relative with known BRCA mutation\n\n2. Hereditary Cancer Panel Testing:\n   - Multi-gene panels covered when BRCA criteria met\n   - Panel must be targeted to personal/family cancer history\n   - Whole exome/genome sequencing not covered for cancer risk\n\n3. Lynch Syndrome Testing:\n   - Colorectal cancer diagnosed age <50\n   - Endometrial cancer diagnosed age <50\n   - Amsterdam criteria met\n   - Bethesda guidelines criteria met\n   - Universal tumor screening recommended\n\n4. Prior Authorization Requirements:\n   - All genetic testing requires authorization\n   - Submit detailed 3-generation family history\n   - Genetic counseling documentation required\n\n5. Genetic Counseling:\n   - Pre-test counseling by certified genetic counselor or medical geneticist REQUIRED\n   - Post-test counseling recommended\n   - Telehealth genetic counseling covered\n\n6. Coverage Limitations:\n   - Test most informative family member first (affected individual)\n   - Predictive testing for family members covered after mutation identified\n   - Repeat testing NOT covered without new diagnosis\n   - Direct-to-consumer testing NOT covered\n   - Variant of uncertain significance (VUS) re-classification updates covered annually",
+    "sections": {
+      "coverage criteria": "BRCA: breast cancer ≤45, ovarian cancer, male breast cancer, family history. Lynch: colorectal/endometrial <50, Amsterdam/Bethesda criteria. Requires pre-test genetic counseling.",
+      "prior authorization": "Required. Submit 3-generation family history, genetic counseling documentation.",
+      "limitations": "Test affected individual first. Predictive testing after mutation ID'd. No repeat testing. No direct-to-consumer. VUS updates annually."
+    },
+    "scraped_at": "2024-01-15T11:10:00"
+  }
+]

@@ -1,0 +1,63 @@
+[
+  {
+    "policy_id": "POLICY-001",
+    "title": "Bariatric Surgery Coverage Guidelines",
+    "url": "https://www.uhcprovider.com/policies/bariatric-surgery",
+    "content": "Bariatric surgery coverage is provided for members meeting the following criteria:\n\n1. BMI Requirements:\n   - BMI ≥ 40 (severe obesity), OR\n   - BMI ≥ 35 with at least one obesity-related comorbidity (e.g., type 2 diabetes, hypertension, sleep apnea)\n\n2. Age Requirements:\n   - Members must be 18 years or older\n   - Special consideration for members under 18 with severe complications\n\n3. Documentation Requirements:\n   - Documented weight history for at least 6 months\n   - Participation in medically supervised weight loss program\n   - Psychological evaluation completed\n   - Nutritional counseling received\n\n4. Prior Authorization:\n   - Required for all bariatric surgery procedures\n   - Submit authorization request at least 14 days before scheduled surgery\n\n5. Covered Procedures:\n   - Gastric bypass (Roux-en-Y)\n   - Sleeve gastrectomy\n   - Adjustable gastric banding\n   - Biliopancreatic diversion with duodenal switch\n\n6. Exclusions:\n   - Revision procedures (unless medically necessary)\n   - Cosmetic procedures following weight loss\n   - Experimental or investigational procedures",
+    "sections": {
+      "coverage criteria": "BMI ≥ 40 or BMI ≥ 35 with comorbidities. Age 18+. Must complete 6-month supervised weight loss program.",
+      "prior authorization": "Required. Submit 14 days before surgery. Include weight history, psychological evaluation, and nutritional counseling documentation.",
+      "covered procedures": "Gastric bypass, sleeve gastrectomy, adjustable gastric banding, biliopancreatic diversion with duodenal switch",
+      "exclusions": "Revision procedures (unless medically necessary), cosmetic procedures, experimental procedures"
+    },
+    "scraped_at": "2024-01-15T10:00:00"
+  },
+  {
+    "policy_id": "POLICY-002",
+    "title": "MRI and Advanced Imaging Prior Authorization Requirements",
+    "url": "https://www.uhcprovider.com/policies/mri-imaging",
+    "content": "Prior authorization is required for the following advanced imaging services:\n\n1. MRI (Magnetic Resonance Imaging):\n   - Brain MRI: Authorization required for non-emergent cases\n   - Spine MRI: Required for all lumbar, thoracic, and cervical spine imaging\n   - Joint MRI: Required for shoulder, knee, hip, ankle imaging\n   - Abdominal/Pelvic MRI: Authorization required\n\n2. CT Scans:\n   - CT Angiography: Prior authorization required\n   - Cardiac CT: Authorization required\n   - Full-body CT screening: Not covered (screening purposes)\n\n3. PET Scans:\n   - Oncology PET scans: Authorization required\n   - Cardiac PET: Prior authorization needed\n   - Brain PET: Authorization required for dementia workup\n\n4. Authorization Process:\n   - Submit request online through provider portal\n   - Include clinical notes and diagnostic justification\n   - Response within 2 business days for routine cases\n   - Same-day response for urgent cases\n\n5. Clinical Criteria:\n   - Conservative treatment attempted (when applicable)\n   - Imaging will change treatment plan\n   - Less costly alternative not appropriate\n   - Clinical indication documented\n\n6. Exemptions from Prior Authorization:\n   - Emergency department imaging\n   - Inpatient imaging\n   - Imaging for active cancer treatment monitoring",
+    "sections": {
+      "coverage determination": "Prior authorization required for MRI, CT angiography, PET scans. Emergency and inpatient imaging exempt.",
+      "authorization process": "Submit online via provider portal with clinical notes. 2-day response for routine, same-day for urgent.",
+      "clinical criteria": "Conservative treatment attempted, imaging will change treatment, clinical indication documented"
+    },
+    "scraped_at": "2024-01-15T10:05:00"
+  },
+  {
+    "policy_id": "POLICY-003",
+    "title": "Genetic Testing Coverage - BRCA and Hereditary Cancer",
+    "url": "https://www.uhcprovider.com/policies/genetic-testing",
+    "content": "Genetic testing for hereditary cancer syndromes is covered when medical necessity criteria are met.\n\n1. BRCA1/BRCA2 Testing Coverage:\n   - Personal history of breast cancer diagnosed before age 50\n   - Personal history of ovarian cancer at any age\n   - Personal history of triple-negative breast cancer before age 60\n   - Family history of BRCA-related cancer in first-degree relative\n   - Ashkenazi Jewish ancestry with breast/ovarian cancer history\n\n2. Multi-Gene Panel Testing:\n   - Covered when BRCA testing criteria are met\n   - Must include genes relevant to personal/family cancer history\n   - Maximum of one panel test per lifetime (unless new diagnosis)\n\n3. Lynch Syndrome Testing:\n   - Personal history of colorectal cancer before age 50\n   - Family history meeting Amsterdam II criteria\n   - Tumor screening (MSI/IHC) positive results\n\n4. Prior Authorization:\n   - Required for all genetic testing\n   - Submit with detailed family history (at least 3 generations)\n   - Include genetic counseling documentation\n\n5. Genetic Counseling Requirements:\n   - Pre-test genetic counseling required\n   - Post-test counseling recommended\n   - Counseling must be by certified genetic counselor or geneticist\n\n6. Limitations:\n   - Testing limited to affected individual first\n   - Cascade testing for family members covered after proband identified\n   - Direct-to-consumer testing not covered\n   - Repeat testing not covered without new clinical indication",
+    "sections": {
+      "coverage criteria": "BRCA testing: breast cancer <50, ovarian cancer any age, triple-negative <60, family history, Ashkenazi Jewish ancestry. Lynch syndrome: colorectal cancer <50, Amsterdam criteria, positive tumor screening.",
+      "prior authorization": "Required. Submit with 3-generation family history and genetic counseling documentation.",
+      "limitations": "Test affected individual first. Cascade testing for family covered. No direct-to-consumer testing. No repeat testing without new indication."
+    },
+    "scraped_at": "2024-01-15T10:10:00"
+  },
+  {
+    "policy_id": "POLICY-004",
+    "title": "Physical Therapy and Rehabilitation Services",
+    "url": "https://www.uhcprovider.com/policies/physical-therapy",
+    "content": "Coverage for physical therapy and rehabilitation services is provided as follows:\n\n1. Outpatient Physical Therapy:\n   - Covered for acute injury or post-surgical rehabilitation\n   - Chronic condition management when functional improvement expected\n   - Maximum 30 visits per calendar year (standard plans)\n   - Additional visits may be authorized for severe injuries\n\n2. Prior Authorization:\n   - NOT required for first 12 visits\n   - Authorization required after 12 visits\n   - Must demonstrate functional improvement to continue\n\n3. Covered Conditions:\n   - Post-surgical rehabilitation (joint replacement, ligament repair)\n   - Acute musculoskeletal injuries\n   - Stroke rehabilitation\n   - Neurological conditions (Parkinson's, MS, spinal cord injury)\n   - Balance and gait disorders\n   - Sports injuries\n\n4. Documentation Requirements:\n   - Initial evaluation with functional assessment\n   - Treatment plan with measurable goals\n   - Progress notes every 4 visits\n   - Re-evaluation at 12 visits if continuing\n\n5. Maintenance Therapy:\n   - Generally not covered\n   - Exception: Progressive neurological conditions\n   - Exception: Prevention of functional decline in chronic conditions\n\n6. Home Health Physical Therapy:\n   - Covered when homebound status documented\n   - Requires physician order\n   - Limited to specific medical conditions",
+    "sections": {
+      "coverage determination": "Covered for acute injury, post-surgical rehab, chronic conditions with expected improvement. 30 visits per year standard. No prior auth for first 12 visits.",
+      "authorization": "Required after 12 visits. Must show functional improvement.",
+      "limitations": "Maintenance therapy generally not covered except progressive neurological conditions. Home health requires homebound status."
+    },
+    "scraped_at": "2024-01-15T10:15:00"
+  },
+  {
+    "policy_id": "POLICY-005",
+    "title": "Sleep Studies and CPAP Coverage",
+    "url": "https://www.uhcprovider.com/policies/sleep-studies",
+    "content": "Coverage for sleep studies and continuous positive airway pressure (CPAP) therapy:\n\n1. Home Sleep Studies:\n   - Covered for suspected obstructive sleep apnea (OSA)\n   - No prior authorization required\n   - Clinical symptoms must be documented (snoring, daytime sleepiness, witnessed apneas)\n\n2. In-Lab Polysomnography:\n   - Prior authorization required\n   - Covered when home sleep study inconclusive or not appropriate\n   - Covered for suspected central sleep apnea, parasomnia, narcolepsy\n   - Split-night studies covered when appropriate\n\n3. CPAP Equipment:\n   - Covered following diagnosis of OSA (AHI ≥ 5)\n   - Initial rental period: 90 days\n   - Purchase after demonstrating compliance (≥4 hours/night for 70% of nights)\n\n4. CPAP Supplies:\n   - Mask: Covered every 3 months\n   - Tubing: Covered every 3 months\n   - Filters: Covered monthly (disposable) or every 6 months (reusable)\n   - Headgear: Covered every 6 months\n\n5. Compliance Requirements:\n   - Download CPAP usage data at 30 days and 90 days\n   - Must use ≥4 hours per night for ≥70% of nights in 30-day period\n   - Non-compliance may result in termination of coverage\n\n6. CPAP Replacement:\n   - Complete system replacement: Every 5 years\n   - Mask replacement: Every 3 months with compliance\n   - Early replacement requires documentation of loss, theft, or damage",
+    "sections": {
+      "coverage criteria": "Home sleep studies: no prior auth, requires OSA symptoms. In-lab polysomnography: prior auth required for inconclusive home study, central sleep apnea, parasomnia, narcolepsy.",
+      "cpap coverage": "Covered for AHI ≥5. 90-day rental then purchase with compliance (≥4 hours/night 70% of nights). Supplies every 3-6 months.",
+      "compliance requirements": "Download data at 30 and 90 days. Must use ≥4 hours/night for ≥70% of nights. Non-compliance may terminate coverage."
+    },
+    "scraped_at": "2024-01-15T10:20:00"
+  }
+]

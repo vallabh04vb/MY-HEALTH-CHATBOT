@@ -1,0 +1,26 @@
+[
+  {
+    "policy_id": "CIGNA-001",
+    "title": "Cigna Bariatric Surgery Coverage Policy",
+    "url": "https://www.cigna.com/healthcare-professionals/resources/bariatric-surgery",
+    "content": "Cigna considers bariatric surgery medically necessary when criteria are satisfied:\n\n1. BMI Thresholds:\n   - BMI ≥ 40, OR\n   - BMI ≥ 35 with high-risk comorbid condition:\n     * Cardiovascular disease (coronary heart disease, stroke)\n     * Type 2 diabetes mellitus\n     * Severe sleep apnea (AHI >40)\n\n2. Age Criteria:\n   - Adults age 18 and older\n   - Adolescents age 13-17 considered on case-by-case basis\n\n3. Weight Management Requirement:\n   - Active participation in physician-supervised weight management program\n   - Duration: 6 months within past 12 months\n   - Program components: diet, exercise, behavioral modification\n\n4. Behavioral Health Assessment:\n   - Psychological/psychiatric evaluation completed\n   - Demonstrates understanding of procedure and lifestyle commitment\n   - No active substance abuse or untreated psychiatric disorder\n\n5. Medical Clearance:\n   - Clearance from primary care physician\n   - Cardiac risk assessment if indicated\n   - Pulmonary function testing if sleep apnea\n\n6. Facility Requirements:\n   - Surgery at Cigna-designated facility\n   - Bariatric Surgery Center of Excellence accreditation preferred\n\n7. Covered Procedures:\n   - Roux-en-Y gastric bypass (open or laparoscopic)\n   - Sleeve gastrectomy (laparoscopic)\n   - Adjustable gastric banding (limited coverage)\n\n8. Exclusions:\n   - Purely cosmetic procedures\n   - Experimental procedures\n   - Intragastric balloon\n   - Endoscopic sleeve gastroplasty",
+    "sections": {
+      "coverage criteria": "BMI ≥40 or BMI ≥35 with cardiovascular disease, diabetes, or severe sleep apnea (AHI>40). Age 18+. 6-month physician-supervised weight management. Psych evaluation. Designated facility.",
+      "covered procedures": "Roux-en-Y gastric bypass, sleeve gastrectomy, limited adjustable gastric banding.",
+      "exclusions": "Cosmetic procedures, experimental, intragastric balloon, endoscopic sleeve gastroplasty."
+    },
+    "scraped_at": "2024-01-15T11:20:00"
+  },
+  {
+    "policy_id": "CIGNA-002",
+    "title": "Cigna Radiology Management Program",
+    "url": "https://www.cigna.com/healthcare-professionals/resources/radiology-management",
+    "content": "Cigna's Radiology Benefit Management program ensures appropriate advanced imaging:\n\n1. Services Requiring Prior Authorization:\n   - MRI (all anatomic regions)\n   - CT (all anatomic regions)\n   - PET scans\n   - Nuclear medicine imaging\n   - Nuclear cardiology\n\n2. MRI Specific Requirements:\n   - Brain MRI: Authorization required\n   - Spine MRI: Required (cervical, thoracic, lumbar)\n   - Joint MRI: Required\n   - Abdominal/Pelvic MRI: Required\n   - Breast MRI: Required (screening and diagnostic)\n\n3. CT Scan Requirements:\n   - All outpatient CT scans require authorization\n   - CT Colonography requires authorization\n   - Calcium scoring NOT covered (screening)\n\n4. Authorization Process:\n   - Request through eviCore (Cigna's imaging partner)\n   - Online portal or phone submission\n   - Decision typically within 1-2 business days\n   - Urgent reviews within 24 hours\n\n5. Clinical Decision Support:\n   - Evidence-based appropriateness criteria\n   - Alternative imaging suggestions when appropriate\n   - Consideration of radiation exposure\n\n6. No Authorization Required:\n   - Emergency services\n   - Inpatient imaging\n   - Imaging for active cancer treatment",
+    "sections": {
+      "authorization requirements": "Prior auth required for all MRI, CT, PET, nuclear medicine, nuclear cardiology. Managed through eviCore.",
+      "authorization process": "Submit via eviCore portal or phone. 1-2 days routine, 24 hours urgent.",
+      "exemptions": "Emergency services, inpatient, active cancer treatment imaging."
+    },
+    "scraped_at": "2024-01-15T11:25:00"
+  }
+]
