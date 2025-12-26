@@ -1,11 +1,12 @@
 #!/bin/bash
-set -e
 
 echo "========================================="
 echo "Starting UHC Chatbot Backend"
 echo "========================================="
 
 # Check if ChromaDB needs initialization
+INIT_NEEDED=0
+
 python -c "
 import chromadb
 import os
@@ -26,14 +27,17 @@ try:
 except Exception as e:
     print(f'❌ ChromaDB not initialized: {e}')
     exit(1)  # Trigger data loading
-"
+" || INIT_NEEDED=1
 
 # If ChromaDB needs initialization, load data
-if [ $? -ne 0 ]; then
+if [ $INIT_NEEDED -eq 1 ]; then
     echo "========================================="
     echo "Initializing ChromaDB with policy data..."
     echo "========================================="
-    python data_pipeline/load_all_providers.py
+    python data_pipeline/load_all_providers.py || {
+        echo "❌ Failed to initialize ChromaDB"
+        exit 1
+    }
     echo "✅ ChromaDB initialization complete!"
 fi
 
