@@ -9,9 +9,8 @@ echo "========================================="
 python -c "
 import chromadb
 import os
-from pathlib import Path
 
-persist_dir = os.getenv('CHROMA_PERSIST_DIRECTORY', str(Path(__file__).parent / 'chroma_data'))
+persist_dir = os.getenv('CHROMA_PERSIST_DIRECTORY', 'chroma_data')
 collection_name = os.getenv('CHROMA_COLLECTION_NAME', 'insurance_policies')
 
 try:
