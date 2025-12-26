@@ -24,11 +24,19 @@ class Settings(BaseSettings):
     API_HOST: str = os.getenv("API_HOST", "0.0.0.0")
     API_PORT: int = int(os.getenv("API_PORT", "8000"))
 
-    # CORS
-    CORS_ORIGINS: List[str] = [
-        "http://localhost:3000",
-        "http://127.0.0.1:3000",
-    ]
+    # CORS - accepts comma-separated string from env or uses default
+    _cors_origins_raw: str = os.getenv("CORS_ORIGINS", "")
+
+    @property
+    def CORS_ORIGINS(self) -> List[str]:
+        """Parse CORS_ORIGINS from comma-separated string or use defaults"""
+        if self._cors_origins_raw:
+            # Split by comma and strip whitespace
+            return [origin.strip() for origin in self._cors_origins_raw.split(",") if origin.strip()]
+        return [
+            "http://localhost:3000",
+            "http://127.0.0.1:3000",
+        ]
 
     # ChromaDB
     CHROMA_PERSIST_DIRECTORY: str = os.getenv(

@@ -17,8 +17,7 @@ services:
         value: False
       - key: CHROMA_PERSIST_DIRECTORY
         value: /opt/render/project/src/backend/chroma_data
-      - key: CORS_ORIGINS
-        sync: false  # Set manually in Render dashboard
+      # CORS_ORIGINS uses defaults from config.py (optional to override with comma-separated string)
       - key: LITELLM_PROXY_BASE_URL
         sync: false  # Set manually (secret)
       - key: LITELLM_PROXY_SECRET_KEY
