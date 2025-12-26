@@ -7,7 +7,7 @@ services:
     plan: free
     pythonVersion: 3.11.9
     buildCommand: cd backend && pip install --upgrade pip && pip install -r requirements.txt
-    startCommand: cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    startCommand: cd backend && bash startup.sh
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.9
