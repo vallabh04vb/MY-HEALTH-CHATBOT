@@ -10,6 +10,7 @@ trivial to add new providers without changing any backend code.
 
 import json
 import sys
+import os
 from pathlib import Path
 from typing import List, Dict
 import chromadb
@@ -39,10 +40,13 @@ class MultiProviderLoader:
 
     def __init__(self):
         """Initialize multi-provider loader"""
-        # Use default paths relative to project root
+        # Use CHROMA_PERSIST_DIRECTORY from env, or default to relative path
         project_root = Path(__file__).parent.parent
-        self.persist_directory = str(project_root / "chroma_data")
-        self.collection_name = "insurance_policies"
+        self.persist_directory = os.getenv(
+            "CHROMA_PERSIST_DIRECTORY",
+            str(project_root / "chroma_data")
+        )
+        self.collection_name = os.getenv("CHROMA_COLLECTION_NAME", "insurance_policies")
 
         # Text splitter
         self.text_splitter = RecursiveCharacterTextSplitter(
