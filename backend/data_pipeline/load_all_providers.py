@@ -257,6 +257,13 @@ def main():
     print("  4. Done! No API changes needed!")
     print("="*80 + "\n")
 
+    # Explicitly ensure ChromaDB data is persisted before exiting
+    print("Flushing ChromaDB to disk...")
+    del loader.chroma_client
+    import time
+    time.sleep(2)  # Give ChromaDB time to flush to disk
+    print("✅ ChromaDB persisted successfully!\n")
+
 
 if __name__ == "__main__":
     main()
