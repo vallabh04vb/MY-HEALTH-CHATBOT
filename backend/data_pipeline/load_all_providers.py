@@ -68,22 +68,32 @@ class MultiProviderLoader:
         # Use new ChromaDB 1.x API
         self.client = chromadb.PersistentClient(path=self.persist_directory)
 
-        # Delete existing collection to start fresh
+        # Try to get existing collection, create if doesn't exist
         try:
-            self.client.delete_collection(name=self.collection_name)
-            print(f"  Deleted existing collection: {self.collection_name}")
+            self.collection = self.client.get_collection(name=self.collection_name)
+            existing_count = self.collection.count()
+            if existing_count > 0:
+                print(f"  ✅ Found existing collection with {existing_count} documents")
+                print(f"  Skipping data load (collection already initialized)\n")
+                self._skip_loading = True
+            else:
+                print(f"  Found empty collection, will load data\n")
+                self._skip_loading = False
         except:
-            pass
-
-        # Create new collection
-        self.collection = self.client.create_collection(
-            name=self.collection_name,
-            metadata={"hnsw:space": "cosine"}
-        )
-        print(f"  Created new collection: {self.collection_name}\n")
+            # Collection doesn't exist, create it
+            self.collection = self.client.create_collection(
+                name=self.collection_name,
+                metadata={"hnsw:space": "cosine"}
+            )
+            print(f"  Created new collection: {self.collection_name}\n")
+            self._skip_loading = False
 
     def load_all_providers(self):
         """Load policies from all providers"""
+        # Skip if collection already has data
+        if self._skip_loading:
+            return
+
         print("="*80)
         print("MULTI-PROVIDER CHROMADB LOADER")
         print("="*80)
@@ -258,11 +268,14 @@ def main():
     print("="*80 + "\n")
 
     # Explicitly ensure ChromaDB data is persisted before exiting
-    print("Flushing ChromaDB to disk...")
-    del loader.chroma_client
-    import time
-    time.sleep(2)  # Give ChromaDB time to flush to disk
-    print("✅ ChromaDB persisted successfully!\n")
+    if not loader._skip_loading:
+        print("\nFlushing ChromaDB to disk...")
+        import time
+        # Close client properly to ensure data is flushed
+        if loader.client:
+            del loader.client
+        time.sleep(1)  # Give ChromaDB time to flush to disk
+        print("✅ ChromaDB persisted successfully!\n")
 
 
 if __name__ == "__main__":
