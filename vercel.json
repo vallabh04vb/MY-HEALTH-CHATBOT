@@ -6,11 +6,5 @@
   "outputDirectory": "frontend/.next",
   "env": {
     "NEXT_PUBLIC_API_URL": "https://uhc-chatbot-backend.onrender.com"
-  },
-  "functions": {
-    "frontend/**/*.{js,ts,jsx,tsx}": {
-      "memory": 1024,
-      "maxDuration": 10
-    }
   }
 }
