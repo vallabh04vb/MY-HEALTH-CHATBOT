@@ -64,9 +64,11 @@ class MultiProviderLoader:
     def _initialize_db(self):
         """Initialize ChromaDB client"""
         print(f"Initializing ChromaDB at: {self.persist_directory}")
+        print(f"Collection name: {self.collection_name}")
 
         # Use new ChromaDB 1.x API
         self.client = chromadb.PersistentClient(path=self.persist_directory)
+        print(f"ChromaDB client created successfully")
 
         # Try to get existing collection, create if doesn't exist
         try:

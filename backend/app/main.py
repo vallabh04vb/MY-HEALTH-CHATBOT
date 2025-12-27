@@ -101,26 +101,48 @@ async def startup_event():
             print(f"❌ Error initializing fallback LLM client: {e}")
             fallback_llm_client = None
 
-    # Initialize ChromaDB
-    try:
-        # Use new ChromaDB 1.x API
-        chroma_client = chromadb.PersistentClient(path=settings.CHROMA_PERSIST_DIRECTORY)
+    # Initialize ChromaDB with retry logic
+    import time
+    max_retries = 3
+    retry_delay = 2
 
-        policy_collection = chroma_client.get_collection(
-            name=settings.CHROMA_COLLECTION_NAME
-        )
+    for attempt in range(max_retries):
+        try:
+            print(f"🔍 ChromaDB initialization attempt {attempt + 1}/{max_retries}")
+            print(f"   Path: {settings.CHROMA_PERSIST_DIRECTORY}")
+            print(f"   Collection: {settings.CHROMA_COLLECTION_NAME}")
 
-        doc_count = policy_collection.count()
-        print(f"✅ ChromaDB initialized: {doc_count} documents in collection")
+            # Use new ChromaDB 1.x API
+            chroma_client = chromadb.PersistentClient(path=settings.CHROMA_PERSIST_DIRECTORY)
 
-        if doc_count == 0:
-            print("⚠️  Warning: ChromaDB collection is empty!")
-            print("   Run data_pipeline/load_chromadb.py to load policies")
+            # List all collections for debugging
+            collections = chroma_client.list_collections()
+            print(f"   Found {len(collections)} collections: {[c.name for c in collections]}")
 
-    except Exception as e:
-        print(f"❌ Error initializing ChromaDB: {e}")
-        chroma_client = None
-        policy_collection = None
+            policy_collection = chroma_client.get_collection(
+                name=settings.CHROMA_COLLECTION_NAME
+            )
+
+            doc_count = policy_collection.count()
+            print(f"✅ ChromaDB initialized: {doc_count} documents in collection")
+
+            if doc_count == 0:
+                print("⚠️  Warning: ChromaDB collection is empty!")
+                print("   Run data_pipeline/load_chromadb.py to load policies")
+
+            break  # Success!
+
+        except Exception as e:
+            print(f"❌ Attempt {attempt + 1} failed: {e}")
+            if attempt < max_retries - 1:
+                print(f"   Retrying in {retry_delay} seconds...")
+                time.sleep(retry_delay)
+                chroma_client = None
+                policy_collection = None
+            else:
+                print(f"   All retries exhausted. ChromaDB not available.")
+                chroma_client = None
+                policy_collection = None
 
     print("="*80 + "\n")
 
