@@ -38,12 +38,9 @@ class Settings(BaseSettings):
             "http://127.0.0.1:3000",
         ]
 
-    # ChromaDB
-    CHROMA_PERSIST_DIRECTORY: str = os.getenv(
-        "CHROMA_PERSIST_DIRECTORY",
-        str(Path(__file__).parent.parent.parent / "chroma_data")
-    )
-    CHROMA_COLLECTION_NAME: str = os.getenv("CHROMA_COLLECTION_NAME", "insurance_policies")
+    # ChromaDB - use Field with default_factory for proper Pydantic env loading
+    CHROMA_PERSIST_DIRECTORY: str = str(Path(__file__).parent.parent / "chroma_data")
+    CHROMA_COLLECTION_NAME: str = "insurance_policies"
 
     # LiteLLM Proxy (from llmops_lite)
     LITELLM_PROXY_BASE_URL: str = os.getenv("LITELLM_PROXY_BASE_URL", "")
