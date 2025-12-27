@@ -1,9 +1,16 @@
 {
-  "buildCommand": "cd frontend && npm install && npm run build",
+  "buildCommand": "cd frontend && npm run build",
+  "devCommand": "cd frontend && npm run dev",
   "installCommand": "cd frontend && npm install",
+  "framework": "nextjs",
   "outputDirectory": "frontend/.next",
-  "framework": null,
   "env": {
     "NEXT_PUBLIC_API_URL": "https://uhc-chatbot-backend.onrender.com"
+  },
+  "functions": {
+    "frontend/**/*.{js,ts,jsx,tsx}": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
   }
 }
